@@ -12,6 +12,12 @@ class App extends React.Component {
          }
          this.hndlBtn1 = this.hndlBtn1.bind(this)
          this.hndlBtn2 = this.hndlBtn2.bind(this)
+         this.hndlBtn3 = this.hndlBtn3.bind(this)
+         this.hndlBtn4 = this.hndlBtn4.bind(this)
+         this.hndlBtn5 = this.hndlBtn5.bind(this)
+         this.hndlBtn6 = this.hndlBtn6.bind(this)
+         this.hndlBtn7 = this.hndlBtn7.bind(this)
+         this.hndlBtn8 = this.hndlBtn8.bind(this)
     }
     hndlBtn1(){
         this.setState(prevState => {
@@ -37,6 +43,84 @@ class App extends React.Component {
             }else {
                 return {
                     colors: ['white', 'white', 'white', 'white']
+                }
+            }
+        })
+    }
+    hndlBtn3(){
+        this.setState(prevState => {
+            if(this.state.colors[2] !== 'orange'){
+                return {
+                    colors: ['white', 'white', 'orange', 'white']
+                }
+            }else {
+                return {
+                    colors: ['white', 'white', 'white', 'white']
+                }
+            }
+        })
+    }
+    hndlBtn4(){
+        this.setState(prevState => {
+            if(this.state.colors[3] !== 'green'){
+                return {
+                    colors: ['white', 'white', 'white', 'green']
+                }
+            }else {
+                return {
+                    colors: ['white', 'white', 'white', 'white']
+                }
+            }
+        })
+    }
+    hndlBtn5(){
+        this.setState(prevState => {
+            if(this.state.textColors[0] !== 'red'){
+                return {
+                    textColors: ['red', 'black', 'black', 'black']
+                }
+            }else {
+                return {
+                    textColors: ['black', 'black', 'black', 'black']
+                }
+            }
+        })
+    }
+    hndlBtn6(){
+        this.setState(prevState => {
+            if(this.state.textColors[1] !== 'yellow'){
+                return {
+                    textColors: ['black', 'yellow', 'black', 'black']
+                }
+            }else {
+                return {
+                    textColors: ['black', 'black', 'black', 'black']
+                }
+            }
+        })
+    }
+    hndlBtn7(){
+        this.setState(prevState => {
+            if(this.state.textColors[2] !== 'pink'){
+                return {
+                    textColors: ['black', 'black', 'pink', 'black']
+                }
+            }else {
+                return {
+                    textColors: ['black', 'black', 'black', 'black']
+                }
+            }
+        })
+    }
+    hndlBtn8(){
+        this.setState(prevState => {
+            if(this.state.textColors[3] !== 'gray'){
+                return {
+                    textColors: ['black', 'black', 'black', 'gray']
+                }
+            }else {
+                return {
+                    textColors: ['black', 'black', 'black', 'black']
                 }
             }
         })
