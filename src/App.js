@@ -7,24 +7,41 @@ class App extends React.Component {
         super()
          this.state = {
              colors: ['white', 'white', 'white', 'white'],
-             text: ['square1', 'square2', 'square3', 'square4']
+             text: ['Square 1', 'Square 2', 'Square 3', 'Square 4'],
+             textColors: ['black', 'black', 'black', 'black']
          }
          this.hndlBtn1 = this.hndlBtn1.bind(this)
+         this.hndlBtn2 = this.hndlBtn2.bind(this)
     }
-    // newHB1 = () => {
-    //     this.setState({colors})
-    // }
     hndlBtn1(){
-            let colors1 = ['white', 'white', 'white', 'white']
-            if(this.state.colors[0] === 'white') {
-                    colors1 = ['black', 'black', 'black', 'black']
-            }
-            this.setState(prevState => {
+        this.setState(prevState => {
+            if(this.state.colors[0] === 'white'){
                 return {
-                    colors: colors1
+                    colors: ['black', 'black', 'black', 'black'],
+                    textColors: ['white', 'white', 'white', 'white']
+                }
+            }else {
+                return {
+                    colors: ['white', 'white', 'white', 'white'],
+                    textColors: ['black', 'black', 'black', 'black']
+                }
             }
         })
     }
+    hndlBtn2(){
+        this.setState(prevState => {
+            if(this.state.colors[0] !== 'purple'){
+                return {
+                    colors: ['purple', 'purple', 'white', 'white']
+                }
+            }else {
+                return {
+                    colors: ['white', 'white', 'white', 'white']
+                }
+            }
+        })
+    }
+    
     
     render() {
         const grid = {
@@ -81,24 +98,28 @@ class App extends React.Component {
                     <div style={topLeft}>
                         <Squares 
                         color={this.state.colors[0]}
+                        textColor={this.state.textColors[0]}
                         text={this.state.text[0]}
                         />
                     </div>
                     <div style={topRight}>
                         <Squares 
                         color={this.state.colors[1]}
+                        textColor={this.state.textColors[1]}
                         text={this.state.text[1]}
                         />
                     </div>
                     <div style={bottomLeft}>
                         <Squares 
                         color={this.state.colors[2]}
+                        textColor={this.state.textColors[2]}
                         text={this.state.text[2]}
                         />
                     </div>
                     <div style={bottomRight}>
                         <Squares 
                         color={this.state.colors[3]}
+                        textColor={this.state.textColors[3]}
                         text={this.state.text[3]}
                         />
                     </div>

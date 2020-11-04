@@ -4,7 +4,7 @@ class Squares extends React.Component {
     render() {
         const squaresGrid = {
             backgroundColor: `${this.props.color}`,
-            // color: 
+            color: `${this.props.textColor}`,
             justifyContent: 'center',
             alignItems: 'center',
             textAlign: 'center'
