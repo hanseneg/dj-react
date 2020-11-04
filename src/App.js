@@ -7,21 +7,21 @@ class App extends React.Component {
         super()
          this.state = {
              colors: ['white', 'white', 'white', 'white'],
-        //     shape: [square, square, square, square],
              text: ['square1', 'square2', 'square3', 'square4']
          }
          this.hndlBtn1 = this.hndlBtn1.bind(this)
     }
+    // newHB1 = () => {
+    //     this.setState({colors})
+    // }
     hndlBtn1(){
-        this.setState(prevState => {
-            if(prevState.colors === 'white'){
+            let colors1 = ['white', 'white', 'white', 'white']
+            if(this.state.colors[0] === 'white') {
+                    colors1 = ['black', 'black', 'black', 'black']
+            }
+            this.setState(prevState => {
                 return {
-                    colors: ['black', 'black', 'black', 'black']
-                }
-            }else {
-                return {
-                    colors: ['white', 'white', 'white', 'white']
-                }
+                    colors: colors1
             }
         })
     }
@@ -47,6 +47,8 @@ class App extends React.Component {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
+            borderStyle: 'solid',
+            borderColor: 'yellow'
         }
         const bottomLeft = {
             gridColumn: '1',
@@ -54,11 +56,22 @@ class App extends React.Component {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
+            borderStyle: 'solid',
+            borderColor: 'blue'
         }
         const bottomRight = {
             gridColumn: '2',
             gridRow: '2',
             display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            borderStyle: 'solid',
+            borderColor: 'green'
+        }
+        const buttonsGrid = {
+            display: 'grid',
+            gridTemplateColumns: '1fr 1fr',
+            gridTemplateRows: '100px 100px',
             justifyContent: 'center',
             alignItems: 'center',
         }
@@ -90,9 +103,16 @@ class App extends React.Component {
                         />
                     </div>
                 </div>
-                <div>
-                    <Buttons />
-            </div>
+                <div style={buttonsGrid}>
+                    <button onClick={this.hndlBtn1}>Button 1</button>
+                    <button onClick={this.hndlBtn2}>Button 2</button>
+                    <button onClick={this.hndlBtn3}>Button 3</button>
+                    <button onClick={this.hndlBtn4}>Button 4</button>
+                    <button onClick={this.hndlBtn5}>Button 5</button>
+                    <button onClick={this.hndlBtn6}>Button 6</button>
+                    <button onClick={this.hndlBtn7}>Button 7</button>
+                    <button onClick={this.hndlBtn8}>Button 8</button>
+                </div>
          </div>
         )
     }

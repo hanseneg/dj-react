@@ -11,14 +11,7 @@ class Buttons extends React.Component {
         }
         return(
             <div style={buttonsGrid}>
-                <button>Button1</button>
-                <button>Button2</button>
-                <button>Button3</button>
-                <button>Button4</button>
-                <button>Button5</button>
-                <button>Button6</button>
-                <button>Button7</button>
-                <button>Button8</button>
+                <button>Button{this.props.text}</button>
             </div>
         )
     }

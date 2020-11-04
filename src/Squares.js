@@ -2,17 +2,15 @@ import React from 'react'
 
 class Squares extends React.Component {
     render() {
-        const square = {
-            // color: 'green',
-            // backgroundColor: 'blue',
+        const squaresGrid = {
+            backgroundColor: `${this.props.color}`,
+            // color: 
             justifyContent: 'center',
             alignItems: 'center',
             textAlign: 'center'
         }
         return(
-            <div style={square}>
-                {this.props.color}
-                {this.props.shape}
+            <div style={squaresGrid}>
                 {this.props.text}
             </div>
         )
